@@ -22,7 +22,7 @@
 			<property name="command_key" value="TwitchAction_SpawnBigWolfFriendCommand" />
 			<property name="title_key" value="TwitchAction_SpawnWolfFriend" />
 			<property name="description_key" value="TwitchAction_SpawnBigWolfFriendDesc" />
-			<property name="start_gamestage" value="1" />
+			<property name="start_gamestage" value="5" />
 			<property name="event_name" value="spawn_bigsidekick" />
 			<property name="default_cost" value="350" />
 			<property name="cooldown" value="1000" />
@@ -36,7 +36,7 @@
 			<property name="command_key" value="TwitchAction_SpawnDeadBearFriendCommand" />
 			<property name="title_key" value="TwitchAction_SpawnDeadBearFriend" />
 			<property name="description_key" value="TwitchAction_SpawnDeadBearFriendDesc" />
-			<property name="start_gamestage" value="1" />
+			<property name="start_gamestage" value="15" />
 			<property name="event_name" value="spawn_deadsidekick" />
 			<property name="default_cost" value="500" />
 			<property name="cooldown" value="1000" />
@@ -50,13 +50,13 @@
 			<property name="command_key" value="TwitchAction_SpawnSuperFriendCommand" />
 			<property name="title_key" value="TwitchAction_SpawnSuperFriend" />
 			<property name="description_key" value="TwitchAction_SpawnSuperFriendDesc" />
-			<property name="start_gamestage" value="1" />
+			<property name="start_gamestage" value="25" />
 			<property name="event_name" value="spawn_superfriend" />
 			<property name="default_cost" value="1000" />
 			<property name="cooldown" value="1000" />
 			<property name="enabled" value="true" />
 		</action>
-
+<!--
 		<action name="twitch_thunderdome">
 			<property name="category" value="Spawns" />
 			<property name="is_positive" value="true" />
@@ -69,6 +69,6 @@
 			<property name="default_cost" value="10000" />
 			<property name="cooldown" value="1000" />
 			<property name="enabled" value="true" />
-		</action>
+		</action>  -->
     </append>
 </config>

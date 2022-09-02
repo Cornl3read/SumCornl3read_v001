@@ -4,14 +4,12 @@
 			<property name="HoldType" value="3"/>
 			<property name="CustomIcon" value="drinkJarPureMineralWater"/>
 			<property name="CustomIconTint" value="#38f5f5"/>
-			<property name="ItemTypeIcon" value="bundle"/>
 			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="1"/>
-			<property name="Stacknumber" value="20"/> <!-- STK resource -->
-			<property name="EconomicValue" value="420"/>
-			<property name="UnlockedBy" value="perkMasterChef"/>
+			<property name="Stacknumber" value="20"/>
+			<property name="EconomicValue" value="42069"/>
 			<property name="DescriptionKey" value="cornLickerDesc"/>
 			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 			<property class="Action0">
@@ -33,11 +31,9 @@
 					<display_value name="dCarryCapacity" value="50"/>
 					<display_value name="dBartering" value=".3"/>
 					<display_value name="$waterAmountAdd" value="30"/>
-					<display_value name="dDuration" value="600"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGrandpasMoonshineDuration" operation="add" value="180"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGrandpasMoonshineDuration" operation="set" value="180">
-						<requirement name="CVarCompare" cvar="$buffGrandpasMoonshineDuration" operation="GT" value="179"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrunkOnCorn"/>
+				    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="cornLickerDuration" operation="set" value="180"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="cornLickerDisplay" operation="set" value="180"/>
+				    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrunkOnCorn"/>
 			</effect_group>
 			<effect_group tiered="false">
 				<requirement name="HasBuff" buff="buffIsOnFire"/>
@@ -56,34 +52,33 @@
 			<property name="HandMeshfile" value="#Other/Items?Food/cornbreadHandPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="noteHeyThereDesc"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Weight" value="0"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Group" value="Special Items"/>
+			<property name="DescriptionKey" value="noteHeyThereDesc"/>
 			<property class="Action0">
 				<property name="Class" value="OpenBundle"/>
 				<property name="Delay" value="0"/>
 				<property name="Use_time" value="0"/>
-				<property name="Create_item" value="feather"/>
-				<property name="Create_item_count" value="1"/>
-			</property>
-		</item>
-		<!-- starter bundle -->
-		<item name="SumCornl3read">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="Extends" value="resourceBundleMaker"/>
-			<property name="CustomIcon" value="foodCornBread"/>
-			<property name="CustomIconTint" value="26240c"/>
-			<property class="Action0">
 				<property name="Create_item" value="ammoJunkTurretRegular,foodCornBread,drinkYuccaJuiceSmoothie,CornLicker,casinoCoin,gunMGT3M60,gunShotgunT2PumpShotgun,ammoShotgunShell,resourceRepairKit,ammo762mmBulletAP,gunRifleT3SniperRifle,gunHandgunT3SMG5,ammo9mmBulletAP,meleeWpnBladeT1HuntingKnife,vehicleBicyclePlaceable,medicalFirstAidKit,armorIronHelmet,modArmorHelmetLight,armorIronBoots,armorIronLegs,armorIronGloves,armorIronChest" />
-				<property name="Create_item_count" value="1000,10,10,1,9999,1,1,450,20,450,1,1,900,1,1,5,1,1,1,1,1,1,1,1,1"/>
+			    <property name="Create_item_count" value="1000,10,10,1,9999,1,1,450,20,450,1,1,900,1,1,5,1,1,1,1,1,1,1,1,1"/>
 			</property>
 		</item>
-		<item name="MessageFromCornl3read">
-			<property name="Extends" value="blankNoteMaster"/>
+
+		<item name="PackageFromCornl3read">
 			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="resourceBundleMaker"/>
 			<property name="DescriptionKey" value="noteHeyThereDesc"/>
-			<property name="CustomIcon" value="challengeQuestMaster"/>
+			<property name="CustomIcon" value="woodFrameBlock"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="CustomIconTint" value="#38f5f5"/>
+			<property class="Action0">
+				<property name="Create_item" value="ammoJunkTurretRegular,foodCornBread,drinkYuccaJuiceSmoothie,CornLicker,casinoCoin,gunShotgunT2PumpShotgun,ammoShotgunShell,resourceRepairKit,ammo762mmBulletBall,gunRifleT3SniperRifle,gunHandgunT3SMG5,ammo9mmBulletBall,meleeWpnBladeT3Machete,vehicleBicyclePlaceable,medicalFirstAidKit,armorScrapHelmet,armorScrapBoots,armorScrapLegs,armorScrapGloves,armorScrapChest,apparelBandana,apparelToughGuySunglasses,apparelOveralls,apparelHoodySweatshirt,apparelCoatLeatherDuster"/>
+				<property name="Create_item_count" value="1000,8,8,1,9999,1,600,3,450,1,1,900,1,1,5,1,1,1,1,1"/>
+			</property>
 		</item>
+
 	</append>
 </configs>
